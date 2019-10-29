@@ -49,9 +49,9 @@ def load_pattern(pattern_file_path):
     # assert all(len(line) == 51 for line in lines)
 
     print("Loading:")
-    for line in lines:
+    for n, line in enumerate(lines):
         print(line[0:50])
-        assert len(line) == 51
+        assert len(line) == 51, "Line number %i is %i characters, not 51" % (n, len(line))
 
     # Do a janky transpose operation
     chars = ""
