@@ -29,7 +29,7 @@ def commit_pattern(pattern_chars, pattern_key=DEFAULT_CODE):
 
     rtfn = datetime.datetime.now()
 
-    start_days_back = datetime.timedelta(days=pattern_daycount + rtfn.day + 4)
+    start_days_back = datetime.timedelta(days=pattern_daycount + rtfn.day)
 
     start_dt = rtfn - start_days_back
     for day in range(pattern_daycount):
